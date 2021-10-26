@@ -1,24 +1,15 @@
-﻿using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System;
-using System.Linq;
-using System.Collections.Generic;
-using System.Text;
-//using OpenQA.Selenium.Support.
+﻿using OpenQA.Selenium;
 
 namespace AutoTestFramework.Pages
 {
-    public class LoginPage
+    class LoginPage
     {
         public IWebDriver driver;
 
         public LoginPage(IWebDriver driver)
         {
-           driver = this.driver;
-           //PageFactory.InitElements(IWebDdriver, this);
+           this.driver = driver;
         }
-        //[FindsBy(How = How.CssSelector, Using = "body > div.Login")];
         public IWebElement UsernameTxt => driver.FindElement(By.Id("username"));
         public IWebElement PasswordTxt => driver.FindElement(By.Id("password"));
         public IWebElement LogInbtn => driver.FindElement(By.Id("btn-login"));

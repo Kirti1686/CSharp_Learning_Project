@@ -11,12 +11,14 @@ namespace AutoTestFramework.Baseclass
     {
         public static IWebDriver driver;
 
+        [SetUp]
         public void open()
         {
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
             driver.Url = "https://login.onlifehealth.com/Home/Login/?ReturnUrl=%2F";
         }
+        [TearDown]
         public void close()
         {
             driver.Quit();
