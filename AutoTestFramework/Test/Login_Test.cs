@@ -8,11 +8,17 @@ using System.Text;
 
 namespace AutoTestFramework.Test
 {
-    class Login_Test : BaseTest
+    public class Login_Test
     {
-
-        LoginPage lp = new LoginPage(driver);
-        lp.Login();
-
+        IWebDriver driver;
+        public Login_Test(IWebDriver driver)
+        {
+            this.driver = driver;
+        }
+        public void Login()
+        {
+            LoginPage lp1 = new LoginPage(driver);
+            lp1.Login();
+        }
     }
 }
