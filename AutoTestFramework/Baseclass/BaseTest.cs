@@ -9,7 +9,7 @@ namespace AutoTestFramework.Baseclass
 {
     public class BaseTest
     {
-        public IWebDriver driver;
+        public static IWebDriver driver;
 
         public void open()
         {
